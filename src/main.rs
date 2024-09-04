@@ -1,3 +1,4 @@
+mod row_pointer;
 fn main() {
     let a = 10;
     let b;
@@ -6,4 +7,5 @@ fn main() {
     c = a + b;
     println!("{}", c); // mostrando valor
     println!("{:p}", &c); // mostrando endereço na memória
+    row_pointer::main();
 }
