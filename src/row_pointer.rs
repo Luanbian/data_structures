@@ -30,3 +30,24 @@ pub fn change_value() {
 
     println!("O valor de a é: {}", a);
 }
+
+pub fn exercise() {
+    let mut a = 4;
+    let mut b = 3;
+    let mut p1: *mut i32 = &mut a;
+    let p2: *mut i32 = p1;
+
+    unsafe {
+        *p2 = *p1 + 3;
+        b = b * (*p1);
+        *p2 += 1;
+    }
+
+    p1 = &mut b;
+
+    unsafe {
+        println!("{:?}, {:?}", p1, p2);
+        println!("{}, {}", *p1, *p2);
+        println!("{}, {}", a, b);
+    }
+}

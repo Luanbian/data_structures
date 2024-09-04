@@ -9,4 +9,5 @@ fn main() {
     println!("{:p}", &c); // mostrando endereço na memória
     row_pointer::main();
     row_pointer::change_value();
+    row_pointer::exercise();
 }
