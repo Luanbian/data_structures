@@ -8,4 +8,5 @@ fn main() {
     println!("{}", c); // mostrando valor
     println!("{:p}", &c); // mostrando endereço na memória
     row_pointer::main();
+    row_pointer::change_value();
 }

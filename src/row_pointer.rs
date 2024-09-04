@@ -18,3 +18,15 @@ pub fn main() {
         println!("Valor de a através do ponteiro bruto: {}", *ptr_a);
     }
 }
+
+pub fn change_value() {
+    let mut a: i32 = 10;
+    let p1: *mut i32 = &mut a;
+    let p2: *mut i32 = p1;
+
+    unsafe {
+        *p2 = 5;
+    }
+
+    println!("O valor de a é: {}", a);
+}
