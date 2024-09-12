@@ -13,3 +13,20 @@ pub fn main() {
         println!("&value[{}] = {:p}, &vector[{}] = {:p}", index, &value, index, &vector[index]);
     }
 }
+
+pub fn walk() {
+    let vector = [10 , 20, 30, 40];
+
+    let first_adress: *const i32 = &vector[0];
+    let second_adress = unsafe {
+        first_adress.add(1)
+    };
+    let second_value = unsafe {
+        *second_adress
+    };
+    
+    println!("{:p}", first_adress);
+    println!("{:p}", second_adress);
+    println!("{}", vector[0]);
+    println!("{}", second_value);
+}
