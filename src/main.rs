@@ -1,6 +1,8 @@
 mod row_pointer;
 mod vectors;
 mod alocation;
+mod structs;
+
 fn main() {
     row_pointer::main();
     row_pointer::change_value();
@@ -8,4 +10,5 @@ fn main() {
     vectors::main();
     vectors::walk();
     alocation::main();
+    structs::main();
 }
